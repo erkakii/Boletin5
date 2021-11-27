@@ -1,6 +1,12 @@
 package Ejercicio3;
 
 public class minimo {
+    /**
+     * Precondición: Ninguna
+     * @param d1 denominador de la primera fracción
+     * @param d2 denominador de la segunda fracción
+     * @return int mínimo común múltiplo de los dos denominadores
+     */
     public static int minimoMultiplo(int d1, int d2) {
         int mcm, i;
         mcm = 1;
