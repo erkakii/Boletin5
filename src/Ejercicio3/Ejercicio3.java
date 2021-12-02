@@ -10,11 +10,20 @@ import java.util.*;
 
 public class Ejercicio3 {
     public static void main(String[] args) {
+        //Declarar variables
         int opcion, mcm, n1, n2, d1, d2, n3;
         char continuar;
         Scanner sc = new Scanner(System.in);
-
+        //Pedir valores
         do {
+            System.out.println("""
+                    1. Sumar las fracciones
+                    2. Restar las fracciones
+                    3. Multiplicar fracciones
+                    4. Dividir fracciones
+                    Eliga una opción
+                    """);
+            opcion = sc.nextInt();
             System.out.println("Diga el valor del primer numerador");
             n1 = sc.nextInt();
             System.out.println("Diga el valor del primer denominador");
@@ -24,16 +33,8 @@ public class Ejercicio3 {
             System.out.println("Diga el valor del segundo denominador");
             d2 = sc.nextInt();
             mcm = minimoMultiplo(d1, d2);
-            System.out.println("""
-                    1. Sumar las fracciones
-                    2. Restar las fracciones
-                    3. Multiplicar fracciones
-                    4. Dividir fracciones
-                    Eliga una opción
-                    """);
-            opcion = sc.nextInt();
             switch (opcion) {
-
+                //operaciones correspondientes
                 case 1 -> {
                     n3 = sumaFracciones(n1, n2, d1, d2);
                     System.out.println("La fracción suma es " + n3 + "/" + mcm);

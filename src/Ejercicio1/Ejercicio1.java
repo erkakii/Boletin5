@@ -7,7 +7,6 @@ public class Ejercicio1 {
      * cadena debe introducirse en mayúsculas
      * El subprograma 6 solo funciona si las letras se introducen en minúsculas*/
     //Programa general
-
     public static void main(String[] args) {
 //Declaración de variables
         int programa;
@@ -35,7 +34,7 @@ public class Ejercicio1 {
                 programa = sc.nextInt();
             } while (programa <= 0 || programa > 13);
 
-            //Subprogramas
+            //Según el número elegido por el usuario usaremos un subprograma u otro
 
             switch (programa) {
                 case 1 -> escribirCaracter();
@@ -72,7 +71,9 @@ public class Ejercicio1 {
         //Declarar variables
     }
 
-    //Subprograma 10
+    /**
+     * Subprograma para saber si un número es primo o no
+     */
     private static void numPrimo() {
         //Declarar variables
         int num, i, contador;
@@ -95,7 +96,9 @@ public class Ejercicio1 {
         }
     }
 
-    //Subprograma 9
+    /**
+     * Subprograma para pasar hectáreas a metros cuadrados
+     */
     private static void metrosCuadrados() {
         //Declarar variables
         int hectareas, metrosCuadrados;
@@ -109,7 +112,9 @@ public class Ejercicio1 {
         System.out.println("Esas hectáreas son " + metrosCuadrados + " metros cuadrados");
     }
 
-    //Subprograma 8
+    /**
+     * Subprograma para saber cuantas cifras tiene un número introducido por el usuario
+     */
     private static void cifrasNum() {
         //Declarar variables
         int num, contador;
@@ -127,7 +132,7 @@ public class Ejercicio1 {
         System.out.println("El número tiene " + contador + " cifras");
     }
 
-    //Subprograma 7
+    //Subprograma para saber si dos números son amigos o no
     private static void numAmigo() {
         //Declarar las variables
         int i, j, num1, num2, suma1, suma2;
@@ -251,7 +256,7 @@ public class Ejercicio1 {
         System.out.println(cadena1.toLowerCase());
     }
 
-    //Subprograma 1
+    //Subprograma 1 escribir un caracter tantas veces como el usuario pida
     private static void escribirCaracter() {
         //Declarar variables
         int veces;
@@ -260,7 +265,7 @@ public class Ejercicio1 {
         //leer caracter
         System.out.println("Diga el carácter que quiere introducir");
         caracter = sc.next().charAt(0);
-        //leerenum de veces
+        //leer numero de veces de veces
         do {
             System.out.println("Diga el número de veces que quierese imprimir el caracter");
             veces = sc.nextInt();
@@ -271,6 +276,6 @@ public class Ejercicio1 {
         for (int i = 1; i <= veces; i++) {
             System.out.print(caracter);
         }
-        System.out.println("\n");
+        System.lineSeparator();
     }
 }

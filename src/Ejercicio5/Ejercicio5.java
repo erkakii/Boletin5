@@ -26,22 +26,20 @@ public class Ejercicio5 {
     }
 
     /**
+     * Algoritmo que dibuja el triángulo
      * @param base     la base del triángulo
      * @param caracter carácter con el que va a dibujar le triangulo
      */
     private static void dibujarTriangulo(int base, char caracter) {
 
-        for (int i=0; i<=base; i ++)
-        {
-            for (int k=0; k < (4 - i / 2); k++)
-            {
+        for (int x = 1; x <= base; x++) {
+            for (int blancos = 1; blancos <= base - x; blancos++) {
                 System.out.print(" ");
             }
-            for (int j=0; j<i; j++)
-            {
+            for (int y = 1; y <= x; y++) {
                 System.out.print(caracter + " ");
             }
-            System.out.println(" ");
+            System.out.println();
         }
     }
 
