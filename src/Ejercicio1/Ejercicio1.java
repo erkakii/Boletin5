@@ -57,10 +57,26 @@ public class Ejercicio1 {
 
     }
 
-
+    //Subprograma para sacar los factores primos de un número
     private static void factoresPrimos() {
-        System.out.println("En construcción");
+        //Declarar variables y pedir números
+        Scanner objEntrada = new Scanner(System.in);
+        System.out.println("Escribe un numero para sacar sus factores primos");
+        int numero = objEntrada.nextInt();
+        factor(numero);
     }
+    //Sacar factores primos
+    static void factor(int numero) {
+        int num = 2;
+
+        while (numero != 1) {
+            while (numero % num == 0) {
+                System.out.println(num);
+                numero /= num;
+            }
+        }
+    }
+
 
     /**
      * Subprograma para saber la pendiente de una recta
@@ -68,7 +84,7 @@ public class Ejercicio1 {
     private static void pendienteRecta() {
         //Declarar variables
         double angulo, pendiente;
-        Scanner sc = new Scanner (System.in);
+        Scanner sc = new Scanner(System.in);
         //Pedir ángulo que forma la recta
         System.out.println("¿Qué ángulo forma la recta con el eje x?");
         angulo = sc.nextFloat();
@@ -81,7 +97,21 @@ public class Ejercicio1 {
     //Subprograma para saber el siguiente número primo
     private static void sigPrimo() {
         //Declarar variables
-
+        int num, i;
+        boolean contador;
+        contador = true;
+        Scanner sc = new Scanner(System.in);
+        //Conseguir num
+        System.out.println("Diga el número");
+        num = sc.nextInt();
+        //Conseguir num primo
+        for (i = num + 1; contador; i++) {
+            if ((i % 2 == 0) || (i % 3 == 0) || (i % 5 == 0)) {
+                contador = false;
+            }
+        }
+        //Mostrar resultado
+        System.out.println("El siguiente número primo es " + i);
     }
 
     /**
