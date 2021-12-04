@@ -75,4 +75,5 @@ public class Ejercicio6 {
         } while (hora < 0 || hora > 23);
         return hora;
     }
+
 }

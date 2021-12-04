@@ -25,7 +25,7 @@ public class Ejercicio2 {
                         """);
                 opcion = sc.nextInt();
             } while (opcion < 1 || opcion > 5);
-
+            //Conseguir coordenadas
             if (opcion != 5) {
                 System.out.println("Diga el valor de la x del primer vector");
                 x1 = sc.nextInt();

@@ -27,7 +27,7 @@ public class Ejercicio1 {
                     10: Saber si un número es primo o no
                     11: Devuelve el siguiente número primo
                     12: Pendiente de la recta
-                    13: Calculo de factores primos
+                    13: Cálculo de factores primos
                     """);
             do {
                 System.out.println("Elija el programa que quiere iniciar");
@@ -62,13 +62,26 @@ public class Ejercicio1 {
         System.out.println("En construcción");
     }
 
+    /**
+     * Subprograma para saber la pendiente de una recta
+     */
     private static void pendienteRecta() {
-        System.out.println("En construcción");
+        //Declarar variables
+        double angulo, pendiente;
+        Scanner sc = new Scanner (System.in);
+        //Pedir ángulo que forma la recta
+        System.out.println("¿Qué ángulo forma la recta con el eje x?");
+        angulo = sc.nextFloat();
+        //Calcular pendiente
+        pendiente = Math.tan(angulo);
+        //Mostrar resultado
+        System.out.println("La pendiente de la recta es " + pendiente);
     }
 
-    //Subprograma 11
+    //Subprograma para saber el siguiente número primo
     private static void sigPrimo() {
         //Declarar variables
+
     }
 
     /**
@@ -167,7 +180,7 @@ public class Ejercicio1 {
         }
     }
 
-    //Subprograma 6
+    //Subprograma para saber si un carácter pertenece al alfabeto o no
     private static void perteneceAlfabeto() {
         //Declarar variables
         char caracter;
@@ -184,7 +197,7 @@ public class Ejercicio1 {
 
     }
 
-    //Subprograma 5
+    //Subprograma para saber si un número es perfecto o no
     private static void numPerfecto() {
         //Declarar variables
         int num, i, suma;
@@ -210,7 +223,7 @@ public class Ejercicio1 {
 
     }
 
-    //Subprograma 4
+    //Subprograma para saber si un número está entre 0 y 9
     private static void caracterEntre0a9() {
         //Declarar variables
         int num;
@@ -225,7 +238,7 @@ public class Ejercicio1 {
         }
     }
 
-    //Subprograma 3
+    //Subprograma para saber si un año es bisiesto o no
     private static void anioBisiesto() {
         //Declaración de variables
         int anio;
@@ -244,7 +257,7 @@ public class Ejercicio1 {
         }
     }
 
-    //Subprograma 2
+    //Subprograma para convertir una cadena en mayúsculas a minúsculas
     private static void convertirMayuscula() {
         //Declarar variables
         String cadena1;
@@ -256,7 +269,7 @@ public class Ejercicio1 {
         System.out.println(cadena1.toLowerCase());
     }
 
-    //Subprograma 1 escribir un caracter tantas veces como el usuario pida
+    //Subprograma 1 escribir un carácter tantas veces como el usuario pida
     private static void escribirCaracter() {
         //Declarar variables
         int veces;
@@ -276,6 +289,6 @@ public class Ejercicio1 {
         for (int i = 1; i <= veces; i++) {
             System.out.print(caracter);
         }
-        System.lineSeparator();
+        System.out.println("/n");
     }
 }

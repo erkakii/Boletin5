@@ -34,7 +34,7 @@ public class Ejercicio3 {
             d2 = sc.nextInt();
             mcm = minimoMultiplo(d1, d2);
             switch (opcion) {
-                //operaciones correspondientes
+                //Operaciones correspondientes
                 case 1 -> {
                     n3 = sumaFracciones(n1, n2, d1, d2);
                     System.out.println("La fracción suma es " + n3 + "/" + mcm);
